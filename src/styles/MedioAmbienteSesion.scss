@@ -1,0 +1,14 @@
+.sesion__container{
+  z-index: 99999;
+  position: absolute;
+}
+
+.conten__sesion__container{
+  display: flex;
+}
+
+@media screen and (max-width: 700px) {
+  .conten__sesion__container{
+    display: block;
+  }
+}

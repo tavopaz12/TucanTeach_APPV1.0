@@ -1,0 +1,119 @@
+@import "../vars";
+
+.login {
+  display: flex;
+  width: 100%;
+  position: fixed;
+}
+
+.hide__inputs input,
+.hide__inputs .button__login {
+  pointer-events: none;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.07rem;
+  margin-bottom: 0.5rem;
+}
+
+.image__login {
+  width: 60%;
+}
+
+.image__login img {
+  height: 100vh;
+}
+
+.form__login {
+  background-color: var(--main-color-green);
+  border-left: solid 1px rgb(4, 80, 4);
+  width: 40%;
+  padding: 2rem;
+  height: 100vh;
+}
+
+.form__login__title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: var(--font-secularOne);
+  text-align: center;
+  color: var(--light-text-color);
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 15px;
+  background-color: var(--body-color);
+  margin-bottom: 30px;
+}
+.progress-bar div {
+  width: 25%;
+  height: 100%;
+  background-color: #5b942a;
+}
+
+.title__category {
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--light-text-color);
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .login {
+    display: block;
+    position: relative;
+  }
+
+  .steps {
+    display: none;
+  }
+
+  .image__login {
+    width: 100%;
+    height: 230px;
+  }
+
+  .image__login img {
+    height: 230px;
+    width: 100vw;
+  }
+
+  .form__login {
+    border-left: none;
+    width: auto;
+    padding: auto;
+    height: 100vh;
+  }
+
+  .form__login__title {
+    font-size: 1.7rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 15px;
+    margin-bottom: 30px;
+  }
+  .progress-bar div {
+    width: 25%;
+    height: 100%;
+  }
+
+  .title__category {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+}
