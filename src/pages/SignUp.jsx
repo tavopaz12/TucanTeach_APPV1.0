@@ -10,7 +10,7 @@ import "../styles/Login/Login.scss";
 import InformacionBasica from "../containers/InformacionBasica";
 import InformacionEscolar from "../containers/InformacionEscolar";
 import InformacionContacto from "../containers/InformacionContacto";
-import { Navigate, NavLink, redirect } from "react-router-dom";
+import { Navigate, NavLink } from "react-router-dom";
 import ToastAlert from "../containers/ToastAlert";
 
 import imagen from "../assets/images/login.jpg";

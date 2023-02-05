@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Navigate, NavLink } from "react-router-dom";
 import BtnSendForm from "../components/BtnSendForm";
 import InputEmail from "../components/InputEmail";
@@ -50,7 +50,11 @@ function Login() {
       const user = await res.json();
 
       if (res.ok) {
-        setData({ data: user, message: "Registro exitoso", status: 200 });
+        setData({
+          data: user,
+          message: "Inicio de sesion exitoso",
+          status: 200,
+        });
         setShow(true);
         signIn(user.token, user);
         setTimeout(() => {
@@ -127,12 +131,17 @@ function Login() {
           </center>
         </form>
         <br />
+        <br />
         <hr />
         <br />
         <div>
           <p href="" className="create__account">
             <NavLink to="/registro" className="create__account--link">
-              Crear una cuenta nueva!
+              Crear una nueva cuenta
+            </NavLink>
+
+            <NavLink className="create__account--link" to="/recovery">
+              Recuperar contraseña
             </NavLink>
           </p>
         </div>

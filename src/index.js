@@ -16,12 +16,12 @@ import Mantenimiento from "./pages/Mantenimiento";
 import MedioAmbienteContainer from "./containers/MedioAmbienteContainer";
 import UseProvider from "./context/useProvider";
 import RequireAuth from "./components/RequireAuth";
+import RecoveryPassword from "./pages/RecoveryPassword";
 
 ReactDOM.render(
   <BrowserRouter>
     <UseProvider>
       <Routes>
-
         <Route path="/" element={<App />}>
           <Route
             path="inicio"
@@ -40,9 +40,11 @@ ReactDOM.render(
             }
           />
 
-          <Route path="mantenimiento" element={<Mantenimiento />} />
+          <Route path="maintenance" element={<Mantenimiento />} />
           <Route path="registro" element={<SignUp />} />
           <Route path="login" element={<Login />} />
+          <Route path="recovery" element={<RecoveryPassword />} />
+          <Route path="change-password" element={<Mantenimiento />} />
           <Route
             path="user/:userName"
             element={

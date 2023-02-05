@@ -6,6 +6,10 @@
   font-family: var(--font-dmSans);
 }
 
+.link__recovery {
+  color: white;
+}
+
 .create__account--link {
   color: beige;
   background-color: var(--btn-green);
@@ -15,7 +19,7 @@
 }
 
 .create__account--link:hover {
-  background-color:var(--btn-green-hover);
+  background-color: var(--btn-green-hover);
 }
 
 @media screen and (max-width: 700px) {
@@ -26,5 +30,4 @@
   .create__account--link {
     margin-left: 0.1rem;
   }
-  
 }
