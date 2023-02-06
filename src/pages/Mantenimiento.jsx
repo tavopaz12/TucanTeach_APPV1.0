@@ -2,9 +2,6 @@ import React from "react";
 import "../styles/Mantenimiento.scss";
 
 export default function Mantenimiento() {
-  window.onload = function () {
-    document.getElementById("fade-in").className = "fade-me";
-  };
   return (
     <>
       <main>

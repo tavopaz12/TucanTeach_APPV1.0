@@ -19,7 +19,7 @@ export default function PerfilUser() {
         to={"/"}
       />
     );
-
+ 
   return (
     <>
       <div className="header__perfilUser">

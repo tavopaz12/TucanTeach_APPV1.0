@@ -204,11 +204,11 @@ function SignUp() {
             <div>{componentList[page]}</div>
           </form>
           <br />
-          <br />
           <div>
             <p href="" className="create__account">
               Ya tengo una cuenta!!
-              <NavLink to="/login" className="create__account--link">
+              {" "}
+              <NavLink to="/login" className="register">
                 Iniciar Sesión
               </NavLink>
             </p>

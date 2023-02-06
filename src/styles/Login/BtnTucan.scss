@@ -1,13 +1,34 @@
 .create__account {
-  color: white;
+  color: rgb(139, 158, 144);
   text-align: center;
-  font-size: 1.1rem;
-  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
   font-family: var(--font-dmSans);
 }
 
 .link__recovery {
   color: white;
+}
+
+.right {
+  text-align: right;
+}
+
+.forgot__password {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
+.register {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 30px;
+}
+
+.forgot__password:hover,
+.register:hover {
+  color: greenyellow;
 }
 
 .create__account--link {

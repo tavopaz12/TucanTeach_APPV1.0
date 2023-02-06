@@ -121,6 +121,13 @@ function Login() {
             setErrors={setErrors}
             maxlength={"12"}
           />
+          <div className="right">
+            <NavLink className="forgot__password" to="/recovery">
+              He olvidado mi contraseña
+            </NavLink>
+          </div>
+
+          <br />
           <br />
           <center>
             <BtnSendForm
@@ -135,15 +142,12 @@ function Login() {
         <hr />
         <br />
         <div>
-          <p href="" className="create__account">
-            <NavLink to="/registro" className="create__account--link">
+          <h3 href="" className="create__account">
+            ¿Aun no tienes una cuenta? <pre></pre>
+            <NavLink to="/registro" className="register">
               Crear una nueva cuenta
             </NavLink>
-
-            <NavLink className="create__account--link" to="/recovery">
-              Recuperar contraseña
-            </NavLink>
-          </p>
+          </h3>
         </div>
       </div>
     </div>

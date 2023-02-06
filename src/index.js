@@ -17,6 +17,7 @@ import MedioAmbienteContainer from "./containers/MedioAmbienteContainer";
 import UseProvider from "./context/useProvider";
 import RequireAuth from "./components/RequireAuth";
 import RecoveryPassword from "./pages/RecoveryPassword";
+import ChangePassword from "./pages/ChangePassword";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -44,7 +45,7 @@ ReactDOM.render(
           <Route path="registro" element={<SignUp />} />
           <Route path="login" element={<Login />} />
           <Route path="recovery" element={<RecoveryPassword />} />
-          <Route path="change-password" element={<Mantenimiento />} />
+          <Route path="change-password" element={<ChangePassword />} />
           <Route
             path="user/:userName"
             element={

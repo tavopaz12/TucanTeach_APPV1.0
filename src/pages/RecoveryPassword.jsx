@@ -78,7 +78,7 @@ export default function RecoveryPassword() {
             text={"No existe coincidencias de este email"}
           ></ToastAlert>
         ) : data.statusCode === 200 ? (
-          <Modal show></Modal>
+          <Modal show recovery></Modal>
         ) : data.statusCode === 500 ? (
           <ToastAlert show={show} error text={data.message}></ToastAlert>
         ) : (
