@@ -1,4 +1,5 @@
 // VARIABLES
+//TEMA CLARO
 html {
   --bg-home: url("https://i.imgur.com/Y3ygvWl.jpeg");
   --bg-img-sesions: url("https://i.imgur.com/Y3ygvWl.jpeg");
@@ -27,7 +28,8 @@ html {
   --hospital-green: #94820d;
   --bg-sesions: white;
   --bg-card-dark: white;
-  --bg-aside-perfil: rgb(221, 236, 205);
+  --bg-aside-perfil: #ffee82;
+  --bg-perfilUser: white;
 
   /* TITLE */
   --title-color: #333;
@@ -55,6 +57,7 @@ html {
   --bg-color5: #309300;
 }
 
+//TEMA OSCURO
 html[data-theme="dark"] {
   --bg-home: url("https://i.postimg.cc/zG4QmpKN/t2.jpg");
   --bg-img-sesions: url("https://i.postimg.cc/yYdgmLM7/12-Z-2102-w026-n002-148-B-p1-148.jpg");
@@ -72,7 +75,7 @@ html[data-theme="dark"] {
   --hospital-green: #031742;
   --bg-sesions: rgb(19, 18, 18);
   --bg-card-dark: black;
-  --bg-aside-perfil: rgb(37, 37, 36);
+  --bg-aside-perfil: #ffee82;
 
   /* TITLE */
   --title-color: white;
@@ -91,6 +94,8 @@ html[data-theme="dark"] {
   --bg-btn-hover: #265df2;
   --temas-hover: rgb(44, 43, 43);
   --border-color: rgb(41, 40, 40);
+  --bg-aside-perfil: #8629e9;
+  --bg-perfilUser: #1a0832;
 
   /* COLOR SLIDE */
   --bg-color1: #17277e;

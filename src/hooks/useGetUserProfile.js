@@ -4,7 +4,7 @@ export function useGetUserProfile(userName) {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/api/v1/profile/${userName}`)
+    fetch(`https://tavopaz12.ml/api/v1/profile/${userName}`)
       .then((response) => {
         return response.json();
       })

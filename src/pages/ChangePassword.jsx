@@ -73,7 +73,7 @@ export default function ChangePassword() {
     const signal = controller.signal;
     try {
       const res = await fetch(
-        "http://localhost:3005/api/v1/auth/change-password",
+        "https://tavopaz12.ml/api/v1/auth/change-password",
         {
           method: "POST",
           signal: signal,

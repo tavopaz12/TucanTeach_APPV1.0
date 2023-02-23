@@ -1,13 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import ContainerSession from "../containers/ContainerSession.jsx";
 import Header from "../containers/Header.jsx";
 import "../styles/MedioAmbiente.scss";
 import { getCursosMedioAmbiente } from "../hooks/useDataMedioAmbiente.jsx";
 import { Outlet } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
+import { getSesiones } from "../hooks/sesiones.service.js";
 
 export default function MedioAmbiente() {
   const cursos = getCursosMedioAmbiente();
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [sesiones, setSesiones] = useState([]);
+
+  useEffect(() => {
+    async function loadSesiones() {
+      const res = await getSesiones();
+
+      if (res.status === 200) {
+        setSesiones(res.data);
+        setIsLoading(false);
+      }
+    }
+
+    loadSesiones();
+  }, []);
+
+  console.log(sesiones, isLoading);
+
+  // GENERAR ID SHORT
+  // const id = uuidv4().split("-").splice(0, 3).join('');
+  // console.log(id);
+
   return (
     <>
       <Outlet></Outlet>
@@ -21,13 +46,13 @@ export default function MedioAmbiente() {
         </div>
 
         <div className="container__cards">
-          {cursos.map((curso) => (
+          {sesiones.map((sesion) => (
             <ContainerSession
-              to={`${curso.number}`}
-              key={curso.number}
-              title={curso.name}
-              image={curso.image}
-              objective={curso.amount}
+              to={`${sesion.id}`}
+              key={sesion.id}
+              title={sesion.title}
+              image={sesion.image}
+              objective={sesion.objective}
             />
           ))}
         </div>

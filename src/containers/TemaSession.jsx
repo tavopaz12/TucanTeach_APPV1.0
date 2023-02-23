@@ -8,6 +8,7 @@ export default function TemaSession({ isToogle }) {
   let navigate = useNavigate();
   let params = useParams();
   let actividad = getActividadMedioAmbiente(params.actvividadId);
+
   if (!actividad) return <ActividadDefault></ActividadDefault>;
 
   return (
@@ -18,14 +19,14 @@ export default function TemaSession({ isToogle }) {
           : "tema__section__container"
       }
     >
-      <h2>Total Due: {actividad.amount}</h2>
-      <p>
-        {actividad.name}: {actividad.number}
-      </p>
-      <p>Due Date: {actividad.due}</p>
       <div>
         {actividad.content ? (
-          <iframe title="actividad" width="100%" height="500rem" src={actividad.content}></iframe>
+          <iframe
+            title="actividad"
+            width="100%"
+            height="500rem"
+            src={actividad.content}
+          ></iframe>
         ) : (
           ""
         )}
@@ -36,7 +37,7 @@ export default function TemaSession({ isToogle }) {
             navigate("/medio-ambiente");
           }}
         >
-          Delete
+          Regresar
         </button>
       </p>
       <div className="tema__section__container__lorem"></div>

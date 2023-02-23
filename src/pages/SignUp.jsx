@@ -35,8 +35,10 @@ function SignUp() {
     },
   });
   const [show, setshow] = useState(false);
+  const id = uuidv4();
+
   const [formData, setFormData] = useState({
-    id: uuidv4(),
+    id,
     name: "",
     lastName: "",
     userName: "",
@@ -56,7 +58,7 @@ function SignUp() {
     const signal = controller.signal;
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3005/api/v1/users", {
+      const res = await fetch("https://tavopaz12.ml/api/v1/users", {
         method: "POST",
         signal: signal,
         body: JSON.stringify(formData),
@@ -89,6 +91,8 @@ function SignUp() {
       setshow(false);
     }, 5000);
   };
+
+  console.log(data.errors);
 
   const componentList = [
     <InformacionBasica
@@ -132,7 +136,11 @@ function SignUp() {
           <ToastAlert
             show={show}
             error
-            text={"Este email ya se encuentra registrado!!!"}
+            text={`${
+              data.errors[0].path === "user_name"
+                ? "Este nombre de usuario ya se encuentra registrado!!!"
+                : "El email ya se encuentra registrado!!!"
+            }`}
           ></ToastAlert>
         ) : data.statusCode === 500 ? (
           <ToastAlert show={show} error text={data.message}></ToastAlert>
@@ -206,8 +214,7 @@ function SignUp() {
           <br />
           <div>
             <p href="" className="create__account">
-              Ya tengo una cuenta!!
-              {" "}
+              Ya tengo una cuenta!!{" "}
               <NavLink to="/login" className="register">
                 Iniciar Sesión
               </NavLink>

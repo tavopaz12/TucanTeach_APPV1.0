@@ -12,17 +12,19 @@
 }
 
 .container__user__img {
+  margin-top: 4px;
   width: 3rem;
   height: 3rem;
+  border-radius: 50%;
 }
 
 .container__user__name {
   margin-left: 0.3rem;
   color: white;
   font-weight: 900;
-  font-family:var(--font-secondary);
+  font-family: var(--font-secondary);
   text-transform: uppercase;
-} 
+}
 
 @media screen and (max-width: 700px) {
   .container__user__name {

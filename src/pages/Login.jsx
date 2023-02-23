@@ -40,7 +40,7 @@ function Login() {
     const signal = controller.signal;
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3005/api/v1/auth/login", {
+      const res = await fetch("https://tavopaz12.ml/api/v1/auth/login", {
         method: "POST",
         signal: signal,
         body: JSON.stringify(formData),

@@ -3,10 +3,9 @@ import { useParams } from "react-router-dom";
 import HeaderSesion from "../containers/HeaderSesion.jsx";
 import TemasContainer from "../containers/TemasContainer.jsx";
 import TemaSession from "../containers/TemaSession.jsx";
-import { getCursoMedioAmbiente } from "../hooks/useDataMedioAmbiente.jsx";
-
 import "../styles/MedioAmbienteSesion.scss";
 import NotFound from "./NotFound.jsx";
+import useGetSesion from "../hooks/useGetSesion.js";
 
 export default function SessionsMedioAmbiente() {
   const [toggleMenu, setToggleMenu] = useState(
@@ -14,8 +13,11 @@ export default function SessionsMedioAmbiente() {
   );
 
   let params = useParams();
-  let curso = getCursoMedioAmbiente(params.cursoId);
-  if (!curso)
+  let sesion = useGetSesion(params.cursoId);
+
+  console.log(sesion);
+
+  if (!sesion)
     return (
       <NotFound
         title={"Esta sesión no existe en nuestra aplicación, intenta con otra"}
@@ -29,7 +31,7 @@ export default function SessionsMedioAmbiente() {
         <HeaderSesion toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
 
         <div className="conten__sesion__container">
-          {toggleMenu === true ? <TemasContainer/> : ""}
+          {toggleMenu === true ? <TemasContainer /> : ""}
           <TemaSession isToogle={toggleMenu}></TemaSession>
         </div>
       </div>

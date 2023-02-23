@@ -34,7 +34,7 @@ export default function RecoveryPassword() {
     const controller = new AbortController();
     const signal = controller.signal;
     try {
-      const res = await fetch("http://localhost:3005/api/v1/auth/recovery", {
+      const res = await fetch("https://tavopaz12.ml/api/v1/auth/recovery", {
         method: "POST",
         signal: signal,
         body: JSON.stringify(email),

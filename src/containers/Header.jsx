@@ -12,6 +12,8 @@ function Header() {
   const user = useGetUser(id);
   const { signOut } = useContext(UserContext);
 
+  const isLoader = Array.isArray(user) && !user.length;
+
   if (!user) {
     signOut();
     return <Navigate to="/login" />;
@@ -20,8 +22,10 @@ function Header() {
       <header className="header">
         <ContainerUser
           to={`/user/${user.userName}`}
+          isLoader={isLoader}
           key={user.userName}
           title={user.name}
+          url={user.avatar}
         />
         <ContainerTools />
       </header>

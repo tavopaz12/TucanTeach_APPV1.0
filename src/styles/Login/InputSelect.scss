@@ -26,7 +26,7 @@
   outline: none;
   border: 0;
   background: transparent;
-  color: var(--light-text-color);
+  color: white;
   border-bottom: 1px solid white;
   position: relative;
   transition: all 0.25s ease;
@@ -34,6 +34,5 @@
 
 .content-select option {
   font-weight: 500;
-  color: var(--dark-text-color);
+  color: black;
 }
-
