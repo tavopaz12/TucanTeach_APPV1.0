@@ -2,8 +2,8 @@
 #Se debe crear un archivo con extensión service y un arroba antes del punto para que reciba los parámetros del puerto
 
 [Unit]
-Description=Balanceo de carga para platzi
-Documentation=https://github.com/tavopaz12/API_V1_Tucanteach.git
+Description=Balanceo de carga para TucanTeach
+Documentation=https://github.com/tavopaz12/TucanTeach_APPV1.0.git
 After=network.target
 
 [Service]
@@ -11,7 +11,7 @@ Environment=PORT=%i
 Type=simple
 User=nodejs
 WorkingDirectory=/home/nodejs/server
-ExecStart=/usr/bin/node /home/nodejs/server
+ExecStart=/usr/bin/node /home/nodejs/server npm run start
 ExecStartPre=-/usr/bin/bash /etc/log.sh %i
 ExecStartPort=-/usr/bin/bash /etc/log.sh %i
 Restart-on=failure
