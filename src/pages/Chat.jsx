@@ -54,7 +54,7 @@ export default function Chat() {
 
   //OBETENER MENSAJES DE SOCKET
   useEffect(() => {
-    socket.current = io("ws://localhost:8900");
+    socket.current = io("ws://149.28.215.217:8900");
 
     socket.current.on("getMessage", (data) => {
       const incomingMessage = {
