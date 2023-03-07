@@ -12,7 +12,7 @@ export default function PerfilUser() {
   let user = useGetUserProfile(params.userName);
   const loader = Array.isArray(user) && !user.length;
 
-  if (!user) {
+  if (user.statusCode === 404) {
     return (
       <NotFound
         title={"Este usuario no existe en nuestra aplicación"}

@@ -1,8 +1,8 @@
 // VARIABLES
 //TEMA CLARO
 html {
-  --bg-home: url("https://i.imgur.com/Y3ygvWl.jpeg");
-  --bg-img-sesions: url("https://i.imgur.com/Y3ygvWl.jpeg");
+  --bg-home: url("../assets/images/t1.jpg");
+  --bg-img-sesions: url("../assets/images/t1.jpg");
 
   /* FONTS */
   /* TITULOS */
@@ -59,8 +59,8 @@ html {
 
 //TEMA OSCURO
 html[data-theme="dark"] {
-  --bg-home: url("https://i.postimg.cc/zG4QmpKN/t2.jpg");
-  --bg-img-sesions: url("https://i.postimg.cc/yYdgmLM7/12-Z-2102-w026-n002-148-B-p1-148.jpg");
+  --bg-home: url("../assets/images/t2.jpg");
+  --bg-img-sesions: url("../assets/images/t2.jpg");
 
   /* TEMA OSCURO */
 

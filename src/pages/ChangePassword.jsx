@@ -6,8 +6,11 @@ import { faLock } from "@fortawesome/free-solid-svg-icons";
 import "./../styles/ChangePassword.scss";
 import ToastAlert from "../containers/ToastAlert";
 import Modal from "../containers/Modal";
+import validateUrl from "./../hooks/config";
 
 export default function ChangePassword() {
+  const baseURL = validateUrl();
+
   const [data, setData] = useState([]);
 
   let location = useLocation();
@@ -72,15 +75,12 @@ export default function ChangePassword() {
     const controller = new AbortController();
     const signal = controller.signal;
     try {
-      const res = await fetch(
-        "https://tavopaz12.ml/api/v1/auth/change-password",
-        {
-          method: "POST",
-          signal: signal,
-          body: JSON.stringify(body),
-          headers: { "Content-type": "application/json; charset=UTF-8" },
-        }
-      );
+      const res = await fetch(`${baseURL}/auth/change-password`, {
+        method: "POST",
+        signal: signal,
+        body: JSON.stringify(body),
+        headers: { "Content-type": "application/json; charset=UTF-8" },
+      });
 
       const user = await res.json();
 

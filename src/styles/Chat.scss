@@ -1,0 +1,337 @@
+.messenger {
+  height: calc(100vh - 6rem);
+  display: flex;
+}
+
+.header__chat {
+  background-color: var(--hospital-green);
+}
+
+.not__messages {
+  text-align: center;
+  display: grid;
+  align-items: center;
+  margin-top: 10rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.form__search__friend {
+  display: flex;
+  margin-top: 1rem;
+  z-index: 1000;
+}
+
+.chats__recientes {
+  margin-top: 2rem;
+  text-align: center;
+  color: rgba($color: #b8b2b2, $alpha: 0.5);
+}
+
+.chats__recientes::after,
+.chats__recientes::before {
+  content: " ------- ";
+}
+
+.search__friend {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  background-color: rgba($color: #ddd8d8, $alpha: 1);
+  // border-radius: 1rem;
+}
+
+.chat__menu {
+  flex: 2.5;
+  background-color: var(--hospital-green);
+  color: white;
+  overflow-y: scroll;
+}
+
+.chat__menu::-webkit-scrollbar {
+  display: none;
+}
+
+.chat__box {
+  flex: 6;
+}
+
+.chat__no__conversation {
+  flex: 6;
+}
+
+.no__conversation__text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 40%;
+  font-size: 3rem;
+  color: rgba($color: #000000, $alpha: 0.5);
+  text-align: center;
+  cursor: default;
+}
+
+.chat__online,
+.chat__online__none {
+  flex: 2;
+  overflow-y: scroll;
+  background-color: rgba($color: #a1a3a2, $alpha: 0.2);
+  border-left: 1px solid rgba($color: #a1a3a2, $alpha: 0.8);
+}
+
+.chat__online::-webkit-scrollbar,
+.chat__online__none::-webkit-scrollbar {
+  display: none;
+}
+
+.chat__box__wraper {
+  height: 100%;
+}
+
+.chat__menu__wraper,
+.chat__online__wraper {
+  padding: 1rem;
+  height: 100%;
+}
+
+.chat__box__wraper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.chat__box__top {
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 1rem;
+  padding-right: 1rem;
+}
+
+.chat__box__top::-webkit-scrollbar {
+  display: none;
+}
+
+.chat__box__bottom {
+  margin-top: 0.5rem;
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input__box {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.show__emojis {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 4rem;
+  margin-right: 1rem;
+}
+
+.show__emojis__box {
+  height: 1rem;
+  display: none;
+}
+
+em-emoji-picker {
+  --background-rgb: 85, 255, 142;
+
+  --border-radius: 24px;
+  --category-icon-size: 1.2rem;
+
+  --color-border-over: rgba(0, 0, 0, 0.1);
+  --color-border: rgba(0, 0, 0, 0.05);
+
+  --rgb-accent: 0, 90, 23;
+  --rgb-background: 255, 255, 255;
+  --rgb-color: 2, 37, 11;
+  --rgb-input: 255, 255, 255;
+
+  --botom: none;
+
+  height: 30vh;
+  width: 55vw;
+}
+
+.color {
+  color: rgb(2, 37, 11);
+}
+
+.custom-file-upload {
+  position: relative;
+  display: inline-block;
+}
+
+.preview__img {
+  position: absolute;
+  bottom: 0;
+}
+.preview__img .close__preview__img {
+  position: absolute;
+  color: red;
+  top: 0;
+  font-size: 1.5rem;
+  right: 0;
+  margin-top: -0.8rem;
+  margin-right: 0.6rem;
+  cursor: pointer;
+}
+.preview__img img {
+  height: 150px;
+  width: auto;
+  margin-bottom: 3.5rem;
+}
+
+.custom-file-upload input[type="file"] {
+  width: 20px;
+  position: absolute;
+  margin-top: 0.2rem;
+  margin-left: 2rem;
+  z-index: 1000;
+  opacity: 0;
+  color: transparent;
+}
+
+.emoji__input {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 0.3rem;
+  margin-right: 1.8rem;
+}
+
+.emoji__input__btn,
+.emoji__input__image {
+  border: none;
+  margin-left: 0.5rem;
+  font-size: 2rem;
+  color: rgba($color: #000000, $alpha: 0.4);
+}
+
+.emoji__input__btn:hover {
+  color: rgba($color: #000000, $alpha: 0.8);
+}
+
+.message__input {
+  width: 100%;
+  height: 2.5rem;
+  background-color: rgba($color: #d4d4d4, $alpha: 0.6);
+  padding: 0.6rem;
+  outline: none;
+  padding-right: 3rem;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.message__send__btn {
+  width: 5rem;
+  height: 2.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 1rem 1rem 0;
+  background-color: green;
+  color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .messenger {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__search__friend {
+    display: flex;
+    position: fixed;
+    width: auto;
+    top: 1;
+    margin-top: 0.3rem;
+    left: 0;
+    width: 100%;
+  }
+
+  .chat__menu {
+    background-color: white;
+    color: black;
+  }
+
+  .chat__box {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+  }
+
+  .chat__box__top {
+    height: 100vh;
+  }
+
+  .chat__box__bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .chat__box__wraper {
+    padding-bottom: 9.5rem;
+  }
+
+  .chat__online {
+    order: -1;
+    flex: 0.7;
+  }
+
+  .chat__no__conversation {
+    display: none;
+  }
+
+  em-emoji-picker {
+    width: 100vw;
+  }
+  .show__emojis {
+    margin-bottom: 3.3rem;
+    margin-right: 1rem;
+  }
+  .chat__menu__wraper {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    overflow-y: scroll;
+  }
+
+  .chat__menu__wraper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .chat__online__wraper {
+    display: flex;
+    overflow-x: scroll;
+  }
+
+  .chat__online__none{
+    display: none;
+  }
+
+  .chat__online__wraper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .results {
+    margin-top: 2rem;
+  }
+}

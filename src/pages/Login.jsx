@@ -7,8 +7,11 @@ import "../styles/Login/BtnTucan.scss";
 import ToastAlert from "../containers/ToastAlert";
 import { UserContext } from "../context/useProvider";
 import imagen from "../assets/images/login.jpg";
+import validateUrl from "./../hooks/config";
 
 function Login() {
+  const baseURL = validateUrl();
+
   const { signIn } = useContext(UserContext);
 
   const [data, setData] = useState([]);
@@ -40,7 +43,7 @@ function Login() {
     const signal = controller.signal;
     e.preventDefault();
     try {
-      const res = await fetch("https://tavopaz12.ml/api/v1/auth/login", {
+      const res = await fetch(`${baseURL}/auth/login`, {
         method: "POST",
         signal: signal,
         body: JSON.stringify(formData),
@@ -94,7 +97,7 @@ function Login() {
         <img src={imagen} alt="" width="150%" />
       </div>
       <div className="form__login">
-        <h2 className="form__login__title">Bienvenido</h2>
+        <h1 className="form__login__title">TucanTeach</h1>
 
         <div className="bird-container bird-container--one">
           <div className="bird bird--one"></div>

@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
+import validateUrl from "./config";
 
 export function useGetUser(id) {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    fetch(`https://tavopaz12.ml/api/v1/users/${id}`)
+    const baseURL = validateUrl();
+
+    fetch(`${baseURL}/users/${id}`)
       .then((response) => {
         return response.json();
       })

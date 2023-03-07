@@ -1,11 +1,12 @@
 import axios from "axios";
+import validateUrl from "./config";
 
-const BASE_URL = "https://tavopaz12.ml/api/v1/cursos";
+const baseURL = validateUrl();
 
 export async function getCursos() {
   try {
     const res = await axios({
-      url: BASE_URL,
+      url: `${baseURL}/cursos`,
       method: "GET",
     });
 

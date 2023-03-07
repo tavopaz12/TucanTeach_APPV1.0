@@ -15,11 +15,17 @@ export default function ProfileContainer({ myPerfil, loader }) {
   }, [isMyPerfil]);
 
   return (
-    <MyPerfil
-      loader={loader}
-      isMyPerfil={isMyPerfil}
-      myPerfil={myPerfil}
-      disabled={disabled}
-    />
+    <>
+      {isMyPerfil ? (
+        <MyPerfil
+          loader={loader}
+          isMyPerfil={isMyPerfil}
+          myPerfil={myPerfil}
+          disabled={disabled}
+        />
+      ) : (
+        <ViewProfile dataUser={myPerfil} loader={loader}></ViewProfile>
+      )}
+    </>
   );
 }

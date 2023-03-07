@@ -1,0 +1,49 @@
+.header__chat__nav {
+  color: black;
+  font-weight: bold;
+  display: flex;
+  padding: 0.8rem;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba($color: #727070, $alpha: 0.5);
+}
+
+.close__chat {
+  color: rgba($color: #9b9898, $alpha: 1);
+  margin-left: -2.1rem;
+  padding-left: 1rem;
+  font-size: 2rem;
+  padding-right: 1.5rem;
+}
+
+.header__chat__nav__picture {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  color: black;
+}
+
+.link:hover {
+  color: rgb(4, 21, 70);
+}
+
+.header__chat__avatar {
+  width: 30px;
+  height: 30px;
+}
+
+.icon__delete__chat {
+  color: rgba($color: #9b9898, $alpha: 1);
+  margin-right: 1.3rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.icon__delete__chat:hover {
+  color: red;
+}

@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "short_name": "Tucanteach",
+  "name": "Tucanteach - Applicacion",
   "icons": [
     {
       "src": "./android-chrome-192x192.png",

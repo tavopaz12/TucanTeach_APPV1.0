@@ -14,8 +14,11 @@ import { Navigate, NavLink } from "react-router-dom";
 import ToastAlert from "../containers/ToastAlert";
 
 import imagen from "../assets/images/login.jpg";
+import validateUrl from "./../hooks/config";
 
 function SignUp() {
+  const baseURL = validateUrl();
+
   const [page, setPage] = useState(0);
   const [data, setData] = useState([]);
   const [isDisabled, setIsDisabled] = useState(false);
@@ -58,7 +61,7 @@ function SignUp() {
     const signal = controller.signal;
     e.preventDefault();
     try {
-      const res = await fetch("https://tavopaz12.ml/api/v1/users", {
+      const res = await fetch(`${baseURL}/users`, {
         method: "POST",
         signal: signal,
         body: JSON.stringify(formData),

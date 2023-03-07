@@ -1,0 +1,62 @@
+.online__friend {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.online__friend__img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.num__online__friends {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.online__friend__imgContainer {
+  position: relative;
+  margin-right: 0.5rem;
+}
+
+.online__friend__badge {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: limegreen;
+  border: 1px solid white;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .num__online__friends {
+    display: none;
+  }
+
+  .online__friend {
+    display: block;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .user__online__userName {
+    margin-left: -0.7rem;
+  }
+
+  .online__friend__imgContainer {
+    margin-bottom: 0.3rem;
+  }
+
+  .online__friend__img {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,5 +1,8 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useRef, useState } from "react";
 import { GetCookie, SetCookie } from "../hooks/cookies";
+import { io } from "socket.io-client";
+import validateUrl from "./../hooks/config";
+import axios from "axios";
 
 export const UserContext = createContext();
 
@@ -7,6 +10,36 @@ const UseProvider = (props) => {
   const [userId, setUserId] = useState(GetCookie("c_user"));
   const [auth, setAuth] = useState(GetCookie("auth"));
   const [role, setRole] = useState(GetCookie("r_user"));
+  const [onlineUsers, setOnlineUsers] = useState([]);
+  const [myfriends, setMyFriends] = useState([]);
+
+  const socket = useRef();
+
+  useEffect(() => {
+    socket.current = io("ws://localhost:8900");
+  }, []);
+
+  useEffect(() => {
+    if (userId) {
+      socket.current.emit("addUser", userId);
+      socket.current.on("getUsers", (users) => {
+        setOnlineUsers(users);
+      });
+    }
+  }, [userId]);
+
+  useEffect(() => {
+    const baseUrl = validateUrl();
+
+    if (userId) {
+      const getFriends = async () => {
+        const res = await axios.get(`${baseUrl}/users/friends/${userId}`);
+        setMyFriends(res.data);
+      };
+
+      getFriends();
+    }
+  }, [userId]);
 
   const signIn = (token, user) => {
     SetCookie("auth", token, 15);
@@ -32,7 +65,9 @@ const UseProvider = (props) => {
     setRole("");
   };
   return (
-    <UserContext.Provider value={{ userId, auth, role, signIn, signOut }}>
+    <UserContext.Provider
+      value={{ myfriends, onlineUsers, userId, auth, role, signIn, signOut }}
+    >
       {props.children}
     </UserContext.Provider>
   );

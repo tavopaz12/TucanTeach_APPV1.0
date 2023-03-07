@@ -1,0 +1,77 @@
+@import "./_vars.scss";
+
+.myPerfil__container__section__hobbies {
+  display: flex;
+  width: auto;
+  gap: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  justify-content: space-between;
+}
+
+.myPerfil__container__section__hobbies__title {
+  margin-left: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.myPerfil__container__section__hobbies button {
+  width: 20%;
+  text-transform: uppercase;
+  padding: 0.3rem;
+  border-radius: 1rem;
+}
+
+.myPerfil__container__section__hobbies__btn {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(90deg, #063e77 0%, #400342 100%);
+  border: 1px solid white;
+  border-radius: 1rem;
+  transition: 1000ms;
+  transform: translateY(0);
+}
+
+.myPerfil__container__section__hobbies__btn:hover {
+  transition: 1000ms;
+  transform: translateY(-6px);
+  background: linear-gradient(90deg, #054585 0%, #6d0570 100%);
+  color: #ffffff;
+  border: 1px solid white;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.flex-skeleton {
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .myPerfil__container__section__hobbies {
+    flex-direction: column;
+  }
+
+  .myPerfil__container__aside {
+    width: 100vw;
+  }
+
+  .myPerfil__container__section__hobbies button {
+    width: 100%;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}

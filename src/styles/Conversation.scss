@@ -1,0 +1,35 @@
+.conversation {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.conversation:hover {
+  background-color: rgba($color: #043349, $alpha: 1);
+  border-radius: 0.5rem;
+}
+
+.new__message {
+  background-color: rgba($color: #043349, $alpha: 1);
+  border-radius: 0.5rem;
+}
+
+.conversation__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+.conversation__userName {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+  .conversation:hover {
+    background-color: rgba($color: #ececec, $alpha: 1);
+  }
+}

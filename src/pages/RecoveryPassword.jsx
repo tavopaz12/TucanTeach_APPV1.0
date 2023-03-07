@@ -6,8 +6,11 @@ import ToastAlert from "../containers/ToastAlert";
 import Modal from "../containers/Modal";
 
 import "../styles/Recovery.scss";
+import validateUrl from "./../hooks/config";
 
 export default function RecoveryPassword() {
+  const baseURL = validateUrl();
+
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [show, setshow] = useState(false);
@@ -34,7 +37,7 @@ export default function RecoveryPassword() {
     const controller = new AbortController();
     const signal = controller.signal;
     try {
-      const res = await fetch("https://tavopaz12.ml/api/v1/auth/recovery", {
+      const res = await fetch(`${baseURL}/auth/recovery`, {
         method: "POST",
         signal: signal,
         body: JSON.stringify(email),
