@@ -1,11 +1,11 @@
-.tema__section__container{
+.tema__section__container {
   transition: all 0.3s ease;
   padding: 1.5rem;
   background-color: var(--bg-card-dark);
   color: var(--dark-text-color);
 }
 
-.tema__section__container-active{
+.tema__section__container-active {
   transition: all 0.3s ease;
   margin-left: 18.5rem;
   padding: 1.5rem;
@@ -13,16 +13,12 @@
   color: var(--dark-text-color);
 }
 
-body{
-  background-color: var(--bg-card-dark);
-}
-
 @media screen and (max-width: 700px) {
-  .tema__section__container-active{
+  .tema__section__container-active {
     transition: all 0s ease;
     margin-top: 300px;
   }
-  .tema__section__container{
+  .tema__section__container {
     transition: all 0s ease;
   }
 }

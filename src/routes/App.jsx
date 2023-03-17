@@ -14,6 +14,14 @@ import "../styles/global.scss";
 import Admin from "./../pages/Admin";
 import ProtecdAdmin from "./../components/ProtecdAdmin";
 import Chat from "../pages/Chat";
+import DashboardContent from "../containers/DashboardContent";
+import DashboardCursos from "../containers/DashboardCursos";
+import DashboardUsuarios from "./../containers/DashboardUsuarios";
+import DashboardFiles from "./../containers/DashboardFiles";
+import ActividadDefault from "./../containers/ActividadDefault";
+import TemaSession from "./../containers/TemaSession";
+import Curso from "./../pages/Curso";
+import Sesion from "../pages/Sesion";
 
 function App() {
   return (
@@ -67,6 +75,18 @@ function App() {
 
             <Route path="admin" element={<Admin />} />
 
+            <Route path="curso" element={<Layout />}>
+              <Route path=":idCurso/:nameCurso" element={<Curso />} />
+            </Route>
+
+            <Route
+              path="curso/:idCurso/:nameCurso/sesion/:idSesion"
+              element={<Sesion />}
+            >
+              <Route index element={<ActividadDefault />} />
+              <Route path="tema/:actvividadId" element={<TemaSession />} />
+            </Route>
+
             <Route
               path="/dashboard"
               element={
@@ -74,7 +94,13 @@ function App() {
                   <Dashboard />
                 </ProtecdAdmin>
               }
-            />
+            >
+              <Route index element={<DashboardContent />}></Route>
+              <Route path="inicio" element={<DashboardContent />}></Route>
+              <Route path="cursos" element={<DashboardCursos />}></Route>
+              <Route path="usuarios" element={<DashboardUsuarios />}></Route>
+              <Route path="archivos" element={<DashboardFiles />}></Route>
+            </Route>
 
             <Route
               path="*"

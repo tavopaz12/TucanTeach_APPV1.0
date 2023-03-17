@@ -1,0 +1,36 @@
+.user__table {
+  margin: auto;
+  text-align: center;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.user__table .user__table__infoUser__name {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 0.5rem;
+}
+
+.user__table .user__table__img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.user__table th {
+  text-align: center;
+  border-bottom: 1px solid rgba($color: #bbb8b8, $alpha: 0.5);
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.user__table td {
+  vertical-align: middle;
+  text-align: center;
+  height: 40px;
+  border: none;
+  padding: 1rem;
+}

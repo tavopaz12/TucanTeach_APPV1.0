@@ -1,8 +1,8 @@
 // VARIABLES
 //TEMA CLARO
 html {
-  --bg-home: url("../assets/images/t1.jpg");
-  --bg-img-sesions: url("../assets/images/t1.jpg");
+  --bg-home: url("../assets/images/t1.webp");
+  --bg-img-sesions: url("../assets/images/t1.webp");
 
   /* FONTS */
   /* TITULOS */
@@ -21,7 +21,7 @@ html {
   --main-color-blue: linear-gradient(
     45deg,
     rgb(167, 154, 11) 39%,
-    rgb(245, 243, 132) 100%
+    rgb(141, 139, 12) 100%
   );
   --main-color-green: #1c3d36;
   --body-color: #fbfbfe;
@@ -59,8 +59,8 @@ html {
 
 //TEMA OSCURO
 html[data-theme="dark"] {
-  --bg-home: url("../assets/images/t2.jpg");
-  --bg-img-sesions: url("../assets/images/t2.jpg");
+  --bg-home: url("../assets/images/t2.webp");
+  --bg-img-sesions: url("../assets/images/t2.webp");
 
   /* TEMA OSCURO */
 
@@ -68,7 +68,7 @@ html[data-theme="dark"] {
   --main-color-blue: linear-gradient(
     45deg,
     rgb(21, 21, 153) 39%,
-    rgba(0, 212, 255, 1) 100%
+    rgb(9, 102, 121) 100%
   );
   --main-color-green: #1c3d36;
   --body-color: #031742;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/ContainerSessionCard.scss";
 
 export default function ContainerSession({
@@ -7,25 +7,25 @@ export default function ContainerSession({
   objective,
   title,
   to,
-  ...props
+  color,
 }) {
-  let location = useLocation();
+  console.log(color);
   return (
     <>
-      <div className="card swiper-slide">
-        <div className="card__image-content">
-          <span className="card__overlay" />
-          <div className="card-image">
-            <img src={image} alt="SIN IMAGEN" className="card-img" />
+      <div className="container">
+        <div className="card">
+          <div className={`face face1 ${color}`}>
+            <div className="content">
+              <img src={image} alt={title} />
+              <h3>{title}</h3>
+            </div>
           </div>
-        </div>
-        <div className="card__content">
-          <h2 className="card__content__name">{title}</h2>
-          <p className="card__content__description">{objective}</p>
-
-          <Link to={to + location.search} {...props}>
-            <button className="card__button">Ir a la sesion</button>
-          </Link>
+          <div className="face face2">
+            <div className="content">
+              <p>{objective}</p>
+              <Link to={`sesion/${to}`}>Ir a la sesión</Link>
+            </div>
+          </div>
         </div>
       </div>
     </>

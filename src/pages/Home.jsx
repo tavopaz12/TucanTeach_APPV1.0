@@ -38,10 +38,10 @@ function Home() {
           {cursos.map((curso) => (
             <CardSection
               key={curso.id}
+              id={curso.id}
               image={`${curso.image}`}
               title={curso.title}
-              description={""}
-              to={`/${curso.description}`}
+              description={curso.description}
             />
           ))}
         </div>

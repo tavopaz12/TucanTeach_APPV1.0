@@ -14,28 +14,37 @@
   z-index: 1;
   position: absolute;
   top: 0;
+  width: 100vw;
   height: 100vh;
   position: fixed;
 }
 
 .cards__container {
+  margin-top: 3rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  // margin-top: 5.3rem;
+  gap: 5rem;
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.cards__container::-webkit-scrollbar {
+  display: none;
 }
 
 @media screen and (max-width: 700px) {
   .cards__container {
     display: block;
-    width: 300px;
+    height: 100vh;
     margin: 0 auto;
   }
   .bg__home {
-    height: 150vh;
+    height: 100vh;
   }
-  
+
   .home__container {
-    position: absolute;
-    height: 150vh;
+    height: 100vh;
   }
 }

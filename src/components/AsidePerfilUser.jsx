@@ -15,7 +15,7 @@ export default function AsidePerfilUser({ myPerfil, loader }) {
     <>
       <aside className="myPerfil__container__aside">
         {loader ? (
-          <Skeleton duration={0.5}/>
+          <Skeleton duration={0.5} />
         ) : (
           <img
             className="myPerfil__container__aside__img"
@@ -27,13 +27,18 @@ export default function AsidePerfilUser({ myPerfil, loader }) {
         <p className="myPerfil__container__aside__name">
           {loader ? <Skeleton duration={0.5} width={200} /> : myPerfil.name}
         </p>
-        <p className="myPerfil__container__aside__subitutle">
-          {loader ? (
-            <Skeleton duration={0.5} width={200} />
-          ) : (
-            myPerfil.nameSchool
-          )}
-        </p>
+
+        <div className="counter__follows__container">
+          <div>
+            <p>{myPerfil.followers?.length}</p>
+            <p>Seguidores</p>
+          </div>
+
+          <div>
+            <p>{myPerfil.followings?.length}</p>
+            <p>Siguiendo</p>
+          </div>
+        </div>
 
         <div className="myPerfil__container__aside__infos">
           <FontAwesomeIcon

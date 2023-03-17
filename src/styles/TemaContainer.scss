@@ -1,27 +1,15 @@
 .container__medioAmbiente__temas {
   background-color: var(--bg-card-dark);
-  // border-right: 2px solid var(--border-color);
   top: 10;
   position: fixed;
   width: 20%;
-  height: 100vh;
+  height: 100%;
   color: white;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   animation: fadeIn 0.5s;
-}
-
-.container__medioAmbiente__temas-active {
-  background-color: var(--bg-card-dark);
-  top: 0;
-  position: fixed;
-  width: 20%;
-  height: 100vh;
-  color: white;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
+  overflow-x: scroll;
 }
 
 @keyframes fadeIn {
@@ -60,6 +48,10 @@
   }
 }
 
+.list__temas__medioAmbiente:last-child{
+margin-bottom: 5rem;
+}
+
 .list__temas__medioAmbiente {
   ol {
     padding: 0.2rem;
@@ -86,7 +78,9 @@
 
 .container__medioAmbiente__temas__exit {
   width: 100%;
-  position: relative;
+  position: sticky;
+  z-index: 999;
+  top: 0;
   margin-bottom: 1.4rem;
   background-color: white;
   outline: none;
@@ -105,9 +99,9 @@
 
 @media screen and (max-width: 700px) {
   .container__medioAmbiente__temas {
-    top: 3.6rem;
-    width: auto;
-    position: sticky;
+    top: 5rem;
+    width: 100%;
+    position: fixed;
   }
   .container__medioAmbiente__temas-active {
     top: 1rem;
@@ -116,5 +110,9 @@
   }
   .container__medioAmbiente__temas__info {
     margin-top: 1rem;
+  }
+  .tema__section__container-active {
+    margin-top: 0;
+    margin-left: 0;
   }
 }

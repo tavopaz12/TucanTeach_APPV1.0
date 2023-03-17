@@ -3,25 +3,23 @@ import { useParams } from "react-router-dom";
 import HeaderSesion from "../containers/HeaderSesion.jsx";
 import TemasContainer from "../containers/TemasContainer.jsx";
 import TemaSession from "../containers/TemaSession.jsx";
-import "../styles/MedioAmbienteSesion.scss";
 import NotFound from "./NotFound.jsx";
 import useGetSesion from "../hooks/useGetSesion.js";
+import "../styles/MedioAmbienteSesion.scss";
 
-export default function SessionsMedioAmbiente() {
+export default function Sesion() {
   const [toggleMenu, setToggleMenu] = useState(
     localStorage.getItem("toogle") === "false" ? false : true
   );
 
-  let params = useParams();
-  let sesion = useGetSesion(params.cursoId);
+  const { idSesion, idCurso, nameCurso } = useParams();
+  const sesion = useGetSesion(idSesion);
 
-  console.log(sesion);
-
-  if (!sesion)
+  if (sesion.statusCode === 404)
     return (
       <NotFound
         title={"Esta sesión no existe en nuestra aplicación, intenta con otra"}
-        to={"/medio-ambiente"}
+        to={`/curso/${idCurso}/${nameCurso}`}
       />
     );
 

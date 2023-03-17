@@ -8,7 +8,7 @@ export default function ActividadDefault() {
 
   return (
     <>
-      <Navigate to={`${actividad.number}`}></Navigate>
+      <Navigate to={`tema/${actividad.number}`}></Navigate>
     </>
   );
 }

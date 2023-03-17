@@ -13,7 +13,7 @@ import InformacionContacto from "../containers/InformacionContacto";
 import { Navigate, NavLink } from "react-router-dom";
 import ToastAlert from "../containers/ToastAlert";
 
-import imagen from "../assets/images/login.jpg";
+import imagen from "../assets/images/login.webp";
 import validateUrl from "./../hooks/config";
 
 function SignUp() {

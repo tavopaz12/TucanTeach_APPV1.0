@@ -24,7 +24,7 @@
 }
 
 .container__cards {
-  padding-top: 12rem;
+  padding-top: 15rem;
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
@@ -34,10 +34,14 @@
 }
 
 @media screen and (max-width: 700px) {
-  .container__cards{
+  .container__cards {
     display: flex;
   }
   .banner__medioAmbiente__text h2 {
     font-size: 3rem;
+  }
+  .curso__container {
+    height: 100vh;
+    background-color: var(--bg-sesions);
   }
 }

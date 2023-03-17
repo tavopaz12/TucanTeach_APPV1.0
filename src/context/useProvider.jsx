@@ -16,7 +16,8 @@ const UseProvider = (props) => {
   const socket = useRef();
 
   useEffect(() => {
-    socket.current = io("ws://149.28.215.217:8900");
+    // socket.current = io("wss://tucanteach.ml");
+    socket.current = io("ws://localhost:8900");
   }, []);
 
   useEffect(() => {

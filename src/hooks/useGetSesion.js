@@ -4,7 +4,7 @@ export function useGetSesion(id) {
   const [sesion, setSesion] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3005/api/v1/sesiones/${id}`)
+    fetch(`https:///tavopaz12.ml/api/v1/sesiones/${id}`)
       .then((response) => {
         return response.json();
       })

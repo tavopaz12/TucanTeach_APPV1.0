@@ -34,15 +34,71 @@
   color: var(--dark-text-color);
 }
 
+.btn__follow__container {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__follow__btn {
+  display: flex;
+  width: 80%;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  position: relative;
+  border: 2px solid white;
+  background-color: rgb(134, 41, 233);
+  font-weight: bold;
+}
+
+.btn__follow__container__icon {
+  color: white;
+  margin-left: -1.3rem;
+}
+
+.btn__follow__container__title {
+  color: white;
+  margin-left: 1.8rem;
+}
+
+.counter__follows__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1.2rem;
+}
+
 @media screen and (max-width: 700px) {
   .myPerfil__container__aside {
     display: block;
     width: 100%;
+    padding-bottom: 1rem;
   }
-  .myPerfil__container__aside__infos{
+  .myPerfil__container__aside__infos {
     display: none;
   }
-  .myPerfil__container__aside__subitutle{
+  .myPerfil__container__aside__subitutle {
     padding-bottom: 1rem;
+  }
+
+  .user__offline__badge {
+    margin-right: 8.5rem;
+  }
+
+  .user__online__badge {
+    margin-right: 8.5rem;
+  }
+
+  .btn__follow__btn {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    width: 50%;
   }
 }

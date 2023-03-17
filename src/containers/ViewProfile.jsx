@@ -82,6 +82,8 @@ export default function ViewProfile({ dataUser, loader }) {
             ))
           )}
         </div>
+        <br />
+        <br />
       </section>
     </div>
   );

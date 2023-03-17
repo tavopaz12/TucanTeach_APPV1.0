@@ -1,0 +1,110 @@
+$red: #ff3649;
+$green: #054105;
+$blue: #060664;
+$orange: #c96609;
+$pink: #ff00ff;
+$blueLight: #086464;
+$purple: #570653;
+$gray: #333533;
+
+$hShadow: 4px;
+$vShadow: 4px;
+$spreadShadow: 10px;
+
+.cursos__card__container {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  width: 100%;
+  overflow-x: scroll;
+  position: relative;
+}
+.cursos__card__container::-webkit-scrollbar {
+  display: none;
+}
+
+.curso__preview {
+  width: 250px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: white;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.curso__preview img {
+  border-radius: 1rem 1rem 0 0;
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.curso__preview__info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.curso__preview__info .title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.curso__preview.pink {
+  background-color: $pink;
+}
+.curso__preview.pink:hover {
+  box-shadow: $hShadow $vShadow $spreadShadow $pink;
+}
+
+.curso__preview.red {
+  background-color: $red;
+}
+.curso__preview.red:hover {
+  box-shadow: $hShadow $vShadow $spreadShadow $red;
+}
+
+.curso__preview.green {
+  background-color: $green;
+}
+.curso__preview.green:hover {
+  box-shadow: $hShadow $vShadow $spreadShadow $green;
+}
+
+.curso__preview.blue {
+  background-color: $blue;
+}
+.curso__preview.blue:hover {
+  box-shadow: $hShadow $vShadow $spreadShadow $blue;
+}
+
+.curso__preview.orange {
+  background-color: $orange;
+}
+.curso__preview.orange:hover {
+  box-shadow: $hShadow $vShadow $spreadShadow $orange;
+}
+
+.curso__preview.blueLight {
+  background-color: $blueLight;
+}
+.curso__preview.blueLight:hover {
+  box-shadow: $hShadow $vShadow $spreadShadow $blueLight;
+}
+
+.curso__preview.purple {
+  background-color: $purple;
+}
+.curso__preview.purple:hover {
+  box-shadow: $hShadow $vShadow $spreadShadow $purple;
+}
+
+.curso__preview.gray {
+  background-color: $gray;
+}
+.curso__preview.gray:hover {
+  box-shadow: $hShadow $vShadow $spreadShadow $gray;
+}

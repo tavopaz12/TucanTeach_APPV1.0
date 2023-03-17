@@ -54,7 +54,8 @@ export default function Chat() {
 
   //OBETENER MENSAJES DE SOCKET
   useEffect(() => {
-    socket.current = io("ws://149.28.215.217:8900");
+    // socket.current = io("wss://tucanteach.ml");
+    socket.current = io("ws://localhost:8900");
 
     socket.current.on("getMessage", (data) => {
       const incomingMessage = {
@@ -170,7 +171,7 @@ export default function Chat() {
     formData.append("sender", userId);
     formData.append("text", newMessage);
     formData.append("conversationId", currentChat.id);
-
+ 
     const receiverId = currentChat.members.find((member) => member !== userId);
 
     try {

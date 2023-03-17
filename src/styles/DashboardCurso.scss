@@ -1,0 +1,222 @@
+.search__curso__dashboard {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.search__curso__dashboard input {
+  width: 50%;
+  padding: 0.3rem;
+  outline: none;
+  border: 1px solid rgba($color: #cecaca, $alpha: 0.5);
+}
+
+.search__curso__dashboard button {
+  background-color: rgba($color: #0d3d08, $alpha: 1);
+  color: white;
+  padding: 0.3rem;
+  border: none;
+}
+
+.new__curso__dashboard button .icon__add {
+  margin-right: 1.5rem;
+  width: 17px;
+  height: 17px;
+}
+
+.new__curso__dashboard {
+  margin-top: 1rem;
+  justify-content: right;
+  align-items: center;
+  display: flex;
+}
+
+.new__curso__dashboard button {
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  background-color: green;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.modal__add__curso {
+  position: fixed;
+  z-index: 10001;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.modal__add__curso.show {
+  height: 100%;
+  opacity: 1;
+}
+
+.modal__add__curso .add__curso__container {
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: height 1s ease;
+  height: 0;
+  background-color: white;
+  width: 80%;
+}
+
+.modal__add__curso .add__curso__container .preview__curso {
+  height: 80%;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-left: 2rem;
+  border: 1px solid rgba($color: #035851, $alpha: 0.2);
+}
+
+.modal__add__curso .add__curso__container .add__curso__form {
+  height: 80%;
+  padding: 1rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba($color: #045f13, $alpha: 0.2);
+}
+
+.modal__add__curso .add__curso__container .add__curso__form .title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.modal__add__curso
+  .add__curso__container
+  .add__curso__form
+  .form__container
+  input,
+textarea {
+  margin-top: 0.3rem;
+  width: 100%;
+  padding: 0.3rem;
+  outline: none;
+  border: 1px solid rgba($color: #000000, $alpha: 0.2);
+}
+
+.modal__add__curso
+  .add__curso__container
+  .add__curso__form
+  .form__container
+  label
+  span {
+  font-weight: bold;
+}
+
+.modal__add__curso
+  .add__curso__container
+  .add__curso__form
+  .form__container
+  .btn__group__modal {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.modal__add__curso
+  .add__curso__container
+  .add__curso__form
+  .form__container
+  .btn__group__modal
+  .close,
+.save {
+  width: 50%;
+  padding: 0.4rem;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__add__curso
+  .add__curso__container
+  .add__curso__form
+  .form__container
+  .btn__group__modal
+  .close {
+  border-radius: 0.5rem;
+  background-color: rgba($color: #7e0303, $alpha: 1);
+  font-weight: bold;
+  color: white;
+}
+
+.modal__add__curso
+  .add__curso__container
+  .add__curso__form
+  .form__container
+  .btn__group__modal
+  .save {
+  border-radius: 0.5rem;
+  background-color: rgba($color: #085705, $alpha: 1);
+  font-weight: bold;
+  color: white;
+}
+
+.modal__add__curso
+  .add__curso__container
+  .add__curso__form
+  .form__container
+  .btn__group__modal
+  .save.disable {
+  border-radius: 0.5rem;
+  background-color: rgba($color: #085705, $alpha: 0.5);
+  font-weight: bold;
+  color: white;
+}
+
+.modal__add__curso .add__curso__container.show {
+  height: 80%;
+}
+
+// SELECT FILE
+.inputfile + label {
+  max-width: 100%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.5rem;
+  /* 10px 20px */
+}
+
+.inputfile + label svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+
+.inputfile-1 + label {
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  color: #f1e5e6;
+  background-color: #3c39d3;
+}
+
+.inputfile-1 + label:hover {
+  background-color: #202f72;
+}

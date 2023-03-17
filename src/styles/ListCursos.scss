@@ -1,0 +1,63 @@
+.list__cursos__dashboard {
+  margin-top: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.list__cursos__dashboard__top {
+  display: flex;
+}
+
+.list__cursos__dashboard__top__info {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1.5rem;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list__cursos__dashboard__top__info__title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.list__cursos__dashboard__top img {
+  width: 300px;
+}
+
+.list__cursos__dashboard__bottom {
+  margin-top: 1rem;
+  color: rgba($color: #000000, $alpha: 0.7);
+  display: flex;
+  justify-content: space-between;
+}
+
+.list__cursos__dashboard__bottom .show__info {
+  color: red;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.list__cursos__dashboard .tools {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.2rem;
+  padding-right: 2rem;
+  justify-content: right;
+}
+
+.list__cursos__dashboard .tools .icon__edit {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: rgba($color: #0a5ab4, $alpha: 1);
+}
+
+.list__cursos__dashboard .tools .icon__trash {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: rgba($color: #df0c0c, $alpha: 1);
+}

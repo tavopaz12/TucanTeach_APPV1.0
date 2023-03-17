@@ -1,0 +1,84 @@
+.dashboardMenu__container {
+  position: relative;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.menu__toggle {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.menu__toggle.short {
+  right: 45px;
+}
+
+.dashboardMenu__container .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.dashboardMenu__container .logo.short h1 {
+  display: none;
+  transition: display 0.5 ease-out;
+}
+
+.dashboardMenu__container .logo.short img {
+  margin-top: 2rem;
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.dashboardMenu__container .logo .logo__img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.dashboardMenu__container .options {
+  margin-top: 5rem;
+}
+
+.dashboardMenu__container .options .option__container {
+  display: flex;
+  gap: 2.5rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.dashboardMenu__container .options .option__container.short .title {
+  display: none;
+}
+
+.dashboardMenu__container .options .option__container.short .icon {
+  margin-left: -2rem;
+}
+
+.dashboardMenu__container .options .option__container:hover {
+  background-color: rgb(11, 4, 102);
+  border-radius: 1rem;
+}
+
+.dashboardMenu__container .logout {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 3rem;
+  display: flex;
+  gap: 2.5rem;
+  cursor: pointer;
+}
+
+.dashboardMenu__container .logout.short {
+  margin-left: -1rem;
+}
+
+.dashboardMenu__container .logout.short p {
+  display: none;
+}

@@ -1,0 +1,135 @@
+.dashboard__info__tools {
+  background-color: white;
+  border-bottom: 1px solid black;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  top: 0;
+  position: sticky;
+  z-index: 1000;
+}
+
+.dashboard__info__tools__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard__info__tools__icon.icon {
+  font-size: 2rem;
+  color: rgba($color: #686464, $alpha: 0.5);
+  cursor: pointer;
+}
+
+.dashboard__info__user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-right: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.img__user__admin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.dashboard__info__notifications {
+  margin-top: 1rem;
+}
+
+.notification__container__info {
+  padding: 0.5rem;
+  animation: bounce-in 0.5s both;
+  transform-origin: bottom;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 2rem;
+  font-weight: bold;
+  color: black;
+  height: 50px;
+  margin-top: 2rem;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.notification__container__info .icon {
+  color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: rgb(5, 82, 18);
+  margin-left: -1rem;
+  width: 20px;
+  height: 20px;
+  z-index: 9999;
+}
+
+.notification__container__subtitule {
+  text-transform: capitalize;
+  color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.notification__container__subtitule {
+  white-space: pre-wrap; /* Evita que el texto se envuelva */
+  overflow: hidden;
+}
+
+@keyframes cycle-text {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  50.01% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.notification__container__info .icon__close {
+  color: red;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  margin-top: -0.3rem;
+  right: 2rem;
+}
+
+.notification__container__dimiss {
+  background-color: rgb(255, 30, 0);
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  cursor: pointer;
+  position: absolute;
+  margin-top: -2.5rem;
+  color: white;
+  margin-right: 0.4rem;
+  font-size: 0.9rem;
+  right: 0;
+}

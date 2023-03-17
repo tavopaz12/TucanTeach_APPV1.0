@@ -1,13 +1,13 @@
 import { faBook, faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { getActividadesMedioAmbiente } from "../hooks/useDataActividadesMedioAmbiente.jsx";
 import "../styles/TemaContainer.scss";
 
 export default function TemasContainer() {
   let navigate = useNavigate();
-  let location = useLocation();
+  const { idCurso, nameCurso } = useParams();
 
   const actividades = getActividadesMedioAmbiente();
 
@@ -16,7 +16,7 @@ export default function TemasContainer() {
       <div className="container__medioAmbiente__temas__info-active">
         <button
           onClick={() => {
-            navigate("/medio-ambiente");
+            navigate(`/curso/${idCurso}/${nameCurso}`);
           }}
           className="container__medioAmbiente__temas__exit"
         >
@@ -45,20 +45,22 @@ export default function TemasContainer() {
           <p>Temas</p>
         </div>
 
-        <div className="list__temas__medioAmbiente">
-          <ol>
-            {actividades.map((actividad) => (
-              <Link
-                className="tema__active"
-                to={`${actividad.number}` + location.search}
-                key={actividad.number}
-              >
-                <li>
-                  <span>{actividad.name}</span>
-                </li>
-              </Link>
-            ))}
-          </ol>
+        <div className="scroll">
+          <div className="list__temas__medioAmbiente">
+            <ol>
+              {actividades.map((actividad) => (
+                <Link
+                  className="tema__active"
+                  to={`tema/${actividad.number}`}
+                  key={actividad.number}
+                >
+                  <li>
+                    <span>{actividad.name}</span>
+                  </li>
+                </Link>
+              ))}
+            </ol>
+          </div>
         </div>
       </div>
     </section>

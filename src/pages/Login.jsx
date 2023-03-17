@@ -6,7 +6,7 @@ import InputPassword from "../components/InputPassword";
 import "../styles/Login/BtnTucan.scss";
 import ToastAlert from "../containers/ToastAlert";
 import { UserContext } from "../context/useProvider";
-import imagen from "../assets/images/login.jpg";
+import imagen from "../assets/images/login.webp";
 import validateUrl from "./../hooks/config";
 
 function Login() {
