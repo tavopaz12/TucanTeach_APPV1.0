@@ -171,7 +171,7 @@ export default function Chat() {
     formData.append("sender", userId);
     formData.append("text", newMessage);
     formData.append("conversationId", currentChat.id);
- 
+
     const receiverId = currentChat.members.find((member) => member !== userId);
 
     try {

@@ -24,6 +24,7 @@
 }
 
 .container__cards {
+  min-height: 100vh;
   padding-top: 15rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -31,6 +32,18 @@
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: var(--bg-sesions);
+}
+
+.container__loader {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container__loader .skeleton {
+  width: 300px;
+  height: 250px;
 }
 
 @media screen and (max-width: 700px) {
@@ -44,4 +57,18 @@
     height: 100vh;
     background-color: var(--bg-sesions);
   }
+
+  .container__loader {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container__loader .skeleton {
+    height: 300px;
+    margin-left: 2.2rem;
+    width: 80%;
+    margin-bottom: 1rem;
+  }
 }
+

@@ -4,6 +4,17 @@
   text-align: center;
 }
 
+.myPerfil__container__aside .profile__image {
+  margin-left: -1rem;
+}
+
+.myPerfil__container__aside .profile__image .edit {
+  font-size: 2rem;
+  color: var(--dark-text-color);
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
 .myPerfil__container__aside__img {
   margin-top: 6rem;
   height: 150px;

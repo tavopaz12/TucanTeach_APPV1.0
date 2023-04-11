@@ -12,7 +12,7 @@ function CardSection({ title, description, image, id }) {
           <div className="adelante card1">
             <img className="card__img" src={image} alt={title} />
             <div className="card__stats">
-              <p>{title}</p>
+              <h2>{title}</h2>
             </div>
           </div>
           <div className="atras">

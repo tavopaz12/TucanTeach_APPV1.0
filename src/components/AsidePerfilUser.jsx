@@ -4,24 +4,47 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSchoolCircleCheck,
   faPhone,
+  faEdit,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Skeleton from "react-loading-skeleton";
-import "../styles/AsidePerfilUser.scss";
 import "react-loading-skeleton/dist/skeleton.css";
 
-export default function AsidePerfilUser({ myPerfil, loader }) {
+import "../styles/AsidePerfilUser.scss";
+
+export default function AsidePerfilUser({
+  myPerfil,
+  loader,
+  showModal,
+  setShowModal,
+  newAvatar,
+}) {
+  const openModal = () => {
+    if (showModal) {
+      setShowModal(false);
+    } else {
+      setShowModal(true);
+    }
+  };
+
   return (
     <>
       <aside className="myPerfil__container__aside">
         {loader ? (
           <Skeleton duration={0.5} />
         ) : (
-          <img
-            className="myPerfil__container__aside__img"
-            src={myPerfil.avatar}
-            alt=""
-          />
+          <div className="profile__image">
+            <FontAwesomeIcon
+              icon={faEdit}
+              className="edit"
+              onClick={openModal}
+            />
+            <img
+              className="myPerfil__container__aside__img"
+              src={newAvatar ? newAvatar : myPerfil.avatar}
+              alt=""
+            />
+          </div>
         )}
 
         <p className="myPerfil__container__aside__name">

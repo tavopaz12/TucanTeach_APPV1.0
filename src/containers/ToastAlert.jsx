@@ -8,7 +8,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "../styles/ToastAlert.scss";
 
-export default function ToastAlert({ show, success, error, info, warning, text }) {
+export default function ToastAlert({
+  show,
+  success,
+  error,
+  info,
+  warning,
+  text,
+}) {
   return (
     <ul className={show ? "notifications" : "hide"}>
       <li
@@ -39,9 +46,7 @@ export default function ToastAlert({ show, success, error, info, warning, text }
                 : faCheckCircle
             }
           ></FontAwesomeIcon>
-          <span>
-            {text}
-          </span>
+          <span>{text}</span>
         </div>
       </li>
     </ul>
